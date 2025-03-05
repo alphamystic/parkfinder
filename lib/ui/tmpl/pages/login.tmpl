@@ -1,0 +1,35 @@
+<!-- Contact Start -->
+<div class="container-xxl contact py-5">
+    <div class="container">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium fst-italic text-primary">Create Account</p>
+            <h1 class="display-6">If You Have Any Query, Please Contact Us</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-4">Sign up to create park reviews</h3>
+                <p class="mb-4">Fill the form below to create an acount and review various parks.</p>
+                <form action="/login" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+              <h3 class="mb-4">{{.}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container-xxl contact py-5">
+    <div class="container">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium fst-italic text-primary">Create Park</p>
+            <h1 class="display-6">If You Have Any Query, Please Contact Us</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-4">Create a Park</h3>
+                <p class="mb-4">Fill the form below to create a park.</p>
+                <form action="/createpark" method="post" enctype="multipart/form-data">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="park_name" id="park_name" placeholder="Park Name" required>
+                                <label for="park_name">Park Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="location" id="location" placeholder="Location" required>
+                                <label for="location">Park Location</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" name="description" id="description" placeholder="Description of the park." required></textarea>
+                                <label for="description">Description</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="images" class="form-label">Upload Images</label>
+                            <input class="form-control" type="file" name="images" id="images" accept="image/*" multiple>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('description');
+    </script>

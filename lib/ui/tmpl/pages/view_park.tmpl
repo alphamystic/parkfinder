@@ -1,0 +1,132 @@
+
+{{with .Park}}
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="section-title">
+                    <p class="fs-5 fw-medium fst-italic text-primary">{{.Location}}</p>
+                    <h1 class="display-6">{{.Name}}</h1>
+                </div>
+                <p class="mb-4">{{.Description}}</p>
+                <!-- <p class="mb-4">Kangaroos have a fascinating history dating back millions of years, evolving uniquely in Australia's diverse landscapes. From ancient Indigenous connections to modern-day cultural symbols, they embody resilience and adaptability. Explore the rich tapestry of kangaroo history, from their role in Aboriginal Dreamtime stories to their status as iconic Australian wildlife.</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+
+<!-- Review Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalLabel">Write a Review</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm">
+                    <div class="mb-3">
+                        <label for="reviewComment" class="form-label">Comment</label>
+                        <textarea class="form-control" id="reviewComment" name="comment" rows="3" required></textarea>
+                    </div>
+                    <input type="hidden" id="parkID" name="parkID" value="{{.ParkID}}">
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Extract the parkID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const parkID = urlParams.get('pid');
+
+    $('#reviewForm').on('submit', function(e) {
+        e.preventDefault();
+
+        const reviewData = {
+            comment: $('#reviewComment').val(),
+            parkid: parkID
+        };
+        var data = JSON.stringify(reviewData)
+        $.ajax({
+            url: '/create-park-review',
+            method: 'POST',
+            contentType: 'application/json',
+            data: data,
+            success: function(response) {
+                if (response.success) {
+                    alert('Review submitted successfully!');
+                    $('#reviewModal').modal('hide');
+                } else {
+                    alert('Error submitting review: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Failed to submit review: ' + xhr.responseText);
+            }
+        });
+    });
+});
+</script>
+
+
+
+{{with .Images}}
+<div class="container-fluid product py-5 my-5">
+    <div class="container py-5">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium fst-italic text-primary">Viewing park</p>
+            <h1 class="display-6">Images</h1>
+        </div>
+        <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
+            {{range .}}
+            <a href="" class="d-block product-item rounded">
+                <img src="/static/uploads/{{.Dir}}/{{.Image}}" alt="">
+                <!--<div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
+                    <h4 class="text-primary">The Andes</h4>
+                    <span class="text-body">Enjoy breath taking scenes and calm you mind</span>
+                </div>-->
+            </a>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}
+<!-- Review Button -->
+<div class="text-center my-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reviewModal">
+        Write a Review
+    </button>
+</div>
+
+
+{{with .Reviews}}
+<div class="container-fluid testimonial py-5 my-5">
+    <div class="container py-5">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium fst-italic text-white">Review</p>
+            <h1 class="display-6">Honest reviews from our clients</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
+        {{range .}}
+            <div class="testimonial-item p-4 p-lg-5">
+              <h5>{{.UserName}}</h5>
+              <p class="mb-4">{{.Comment}}</p>
+                <!---<div class="d-flex align-items-center justify-content-center">
+                    <img class="img-fluid flex-shrink-0" src="/static/img/testimonial-1.jpg" alt="">
+                    <div class="text-start ms-3">
+                        <h5>Mallory</h5>
+                        <span class="text-primary">Profession</span>
+                    </div>
+                </div>-->
+            </div>
+        {{end}}
+      </div>
+    </div>
+</div>
+{{end}}
