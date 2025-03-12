@@ -2,8 +2,8 @@ package domain
 
 import (
   "fmt"
-  "ken/lib/utils"
-  ent"ken/lib/entities"
+  "github.com/alphamystic/parkfinder/lib/utils"
+  ent"github.com/alphamystic/parkfinder/lib/entities"
 
   "errors"
   "database/sql"

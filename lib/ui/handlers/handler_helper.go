@@ -8,8 +8,8 @@ import (
   "database/sql"
   "html/template"
   "github.com/golang-jwt/jwt/v5"
-  "ken/lib/utils"
-  ent"ken/lib/entities"
+  "github.com/alphamystic/parkfinder/lib/utils"
+  ent"github.com/alphamystic/parkfinder/lib/entities"
   //"github.com/gorilla/sessions"
   //"golang.org/x/crypto/bcrypt"
 )

@@ -1,7 +1,7 @@
 package entities
 
 import (
-  "ken/lib/utils"
+  "github.com/alphamystic/parkfinder/lib/utils"
 )
 
 

@@ -3,7 +3,7 @@ package handlers
 import(
   "fmt"
   "net/http"
-  "ken/lib/utils"
+  "github.com/alphamystic/parkfinder/lib/utils"
 )
 
 func (hnd *Handler) P404(res http.ResponseWriter, req *http.Request) {

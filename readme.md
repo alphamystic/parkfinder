@@ -78,4 +78,4 @@ ContactUS:
   4. MarlCUHandled: Marks a given contact me message as handled or not.
 
 
-Images uploaded are stored incide the static folder in an uploaded folder each with the UUID of the park Id in question.
+Images uploaded are stored inside the static folder in an uploaded folder each with the UUID of the park Id in question.

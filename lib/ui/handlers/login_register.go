@@ -6,9 +6,9 @@ import(
   "time"
   //"context"
   "net/http"
-  dom"ken/lib/domain"
-  ent"ken/lib/entities"
-  "ken/lib/utils"
+  dom"github.com/alphamystic/parkfinder/lib/domain"
+  ent"github.com/alphamystic/parkfinder/lib/entities"
+  "github.com/alphamystic/parkfinder/lib/utils"
 )
 
 func (hnd *Handler) Login(res http.ResponseWriter, req *http.Request){

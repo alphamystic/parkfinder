@@ -4,9 +4,9 @@ import (
  "fmt"
  "net/http"
  "crypto/tls"
- "ken/lib/utils"
- "ken/lib/ui/router"
- //ent"ken/ibgo/entities"
+ "github.com/alphamystic/parkfinder/lib/utils"
+ "github.com/alphamystic/parkfinder/lib/ui/router"
+ //ent"github.com/alphamystic/parkfinder/ibgo/entities"
 )
 
 func main(){

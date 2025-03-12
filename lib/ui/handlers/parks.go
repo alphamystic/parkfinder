@@ -10,9 +10,9 @@ import(
   "net/http"
   "path/filepath"
   "encoding/json"
-  dom"ken/lib/domain"
-  ent"ken/lib/entities"
-  "ken/lib/utils"
+  dom"github.com/alphamystic/parkfinder/lib/domain"
+  ent"github.com/alphamystic/parkfinder/lib/entities"
+  "github.com/alphamystic/parkfinder/lib/utils"
 )
 
 // list parks

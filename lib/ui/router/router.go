@@ -9,9 +9,9 @@ import(
   "syscall"
   "net/http"
   "os/signal"
-  "ken/lib/utils"
-  ent"ken/lib/entities"
-  "ken/lib/ui/handlers"
+  "github.com/alphamystic/parkfinder/lib/utils"
+  ent"github.com/alphamystic/parkfinder/lib/entities"
+  "github.com/alphamystic/parkfinder/lib/ui/handlers"
 )
 
 type Router struct {
