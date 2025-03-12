@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 29, 2024 at 07:38 AM
+-- Generation Time: Mar 12, 2025 at 10:43 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -127,7 +127,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userid`, `role`, `phone`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(12, 'd488e793-953e-4a2f-8ddb-6f74f04b553a', 'ADMIN', '1234567', 'admin', 'admin@pf.com', '$2a$10$2JnjKTUJc5HdliheN9Xr3.intUflGKTpaOyuqtbk21AGvqJX3Y4i.', '2024-05-27 21:26:59', '2024-05-27 21:26:59');
+(12, 'd488e793-953e-4a2f-8ddb-6f74f04b553a', 'ADMIN', '1234567', 'admin', 'admin@pf.com', '$2a$10$2JnjKTUJc5HdliheN9Xr3.intUflGKTpaOyuqtbk21AGvqJX3Y4i.', '2024-05-27 21:26:59', '2024-05-27 21:26:59'),
+(13, '80cf3be6-4067-49c3-be11-b490f8cea97c', 'ADMIN', '123456789', 'toti', 'toti@parkfinder.com', '$2a$10$QmXo09oN7V/8gx3hmKDmv.Bx2s8Y5HkDleDEZ6x1gw4jqQNXCRWve', '2025-03-12 09:12:37', '2025-03-12 09:12:37');
 
 --
 -- Indexes for dumped tables
@@ -183,7 +184,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
