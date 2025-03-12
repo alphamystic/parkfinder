@@ -1,5 +1,8 @@
 # PARK FINDER
 
+## What is park_finder
+Parkfinder is a site meant to enable people find parks in there location. Parks are created by a user when  they create an account and signim. This allows them to blog about the various parks around the world that they have visited, their experience and if the would recommend the place for others.
+
 ## Website Functionality
 
 To create your own files, import park_finder.sql
@@ -27,7 +30,7 @@ Go to your browser and visit: http://localhost:4000 or https://localhost:40001
 3. Allows for definition of your own data types.
 4. It's cross platform as Compiles into different binaries from windows or linux.
 ## Unique Features.
-1. Custom built in template engine that loads templates from ken/lib/ui/tmpl
+1. Custom built in template engine that loads templates from github.com/alphamystic/parkfinder/lib/ui/tmpl
 2. Amazing Admin functions that can  be scalled into a production environment like:
     1. Create and manage newsletters.
     2. Keep track of contact me's
@@ -48,10 +51,10 @@ An Administrator should be able to create parks and delete reviews
 
 ## Data types definition
 Contains entities in which the various data to be persisted or read from the db is to be accessed.
->Directory: ken/lib/entities
+>Directory: github.com/alphamystic/parkfinder/lib/entities
 
 ## User and Functionality Documentation: In the domain folder
-> Directory: ken/lib/domain
+> Directory: github.com/alphamystic/parkfinder/lib/domain
 
 Users:
   1. CreateUser: Creates a user and writes it into the DB
