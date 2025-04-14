@@ -1,5 +1,14 @@
 # Proposal for ParkFinder Website
 
+
+## Problem Statement
+Despite the growing importance of green spaces in urban environments, many individuals face challenges when trying to discover suitable parks that meet their specific needs. Existing platforms such as Google Maps or TripAdvisor offer general information about locations but lack dedicated, community-driven tools tailored for park discovery and engagement. Users often struggle to find comprehensive and up-to-date information about park amenities, accessibility, and visitor experiences. Furthermore, there is no streamlined platform that allows users to contribute their insights, share experiences through blogs, and participate in an active community centered around park exploration.
+
+Additionally, administrators of such platforms often lack efficient tools for managing user-generated content, responding to inquiries, and distributing updates through newsletters. This leads to outdated or irrelevant content, decreased user engagement, and missed opportunities for promoting underutilized public parks.
+
+To address these challenges, a centralized, scalable, and user-friendly web platform is needed — one that not only enables users to find parks based on location but also supports user interaction, experience sharing, and administrative content moderation. ParkFinder aims to fill this gap by delivering a specialized, Golang-powered solution optimized for performance, community contribution, and effective administration.
+
+
 ## Abstract
 ParkFinder is an innovative web-based platform designed to help users discover parks in their location while allowing them to share their experiences through reviews and blogs. The system facilitates user authentication, park listing, and an interactive reviewing process. Administrators have additional functionalities for content moderation, contact management, and newsletter distribution. Built using Golang, ParkFinder provides an efficient, scalable, and secure solution with server-side rendering for optimal performance. This proposal outlines the project’s objectives, literature review, features, technical specifications, and development roadmap.
 
